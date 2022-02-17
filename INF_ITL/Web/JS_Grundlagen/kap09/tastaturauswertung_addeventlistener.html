@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>tastaturauswertung_addeventlistener</title>
+
+    <script type = "text/javascript">
+        window.addEventListener("keypress", function(ev) {
+            document.getElementById("antwort").innerHTML = "Gedrückter Tastencode: " + ev.which;
+        }, true);
+
+        window.addEventListener("keyup",function(ev) {
+            document.getElementById("antwort").innerHTML = "";
+        },true);
+    </script>
+</head>
+<body>
+    <h1>Drücken Sie eine beliebige Taste!</h1>
+    <div id="antwort"></div>
+</body>
+</html>

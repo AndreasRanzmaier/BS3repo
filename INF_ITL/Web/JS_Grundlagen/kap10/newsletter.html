@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Newsletter</title>
+</head>
+<body>
+    <h1>Hotel Newsletter</h1>
+    <script type="text/javascript" src="newsletter.js"></script>
+</body>
+<form id = "anmeldeform" action= "test.php" methode = "get">
+    <table>
+        <div>
+        <label>Vorname: *</label>
+        <input type="text" name="vorname" placeholder="Vorname" >
+        </div>
+        <div>
+        <label>Nachname: *</label> 
+        <input type="text" name="nachname" placeholder="Nachname">
+        </div>
+        <div>
+        <label>E-Mail-Adresse *</label> 
+        <input type="text" name="mail" placeholder="ihre@email.de">
+        </div>
+        <div>
+        <label>Wie sind Sie auf unser Hotel aufmerksam geworden?</label> 
+        <select name="selectbox_name">
+            <option>Freunde</option>
+            <option>Zeitschrift</option>
+            <option>Internet</option>
+            <option>Werbung</option>
+        </select>
+        </div>
+        <div>
+        <label>Wann haben Sie Ihren nächsten Urlaub geplant?</label>
+        <div>
+            <input type="radio" name="r1"> <label>in ca. 1-3 Monaten</label>
+        </div>
+        <div>
+            <input type="radio" name="r1"> <label>in ca. 6 Monaten</label>
+        </div>
+        <div>
+            <input type="radio" name="r1"> <label>in diesem Jahr nicht mehr</label>
+        </div>
+        </div>
+        <div>
+        <label>Wenn sie und etwas mitteilen möchten, so finden Sie hier Platz dafür:</label> 
+        <textarea class="form-control" name="mitteilung" placeholder="Mitteilung"></textarea>
+        </div>
+        </table>
+    <div>
+      <input type="submit" name="anmelden" value="Anmelden" />
+    </div>
+    <div>
+      <input type="reset" name="Zurück zur Startseite" value="Zurücksetzten"/>
+    </div>
+  </form>
+  <div id="status">  </div>
+</html>

@@ -1,0 +1,1 @@
+document.write('Ich befinde mich in einer externen Datei.');

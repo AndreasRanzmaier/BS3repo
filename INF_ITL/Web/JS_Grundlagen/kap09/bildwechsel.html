@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bildwechsel</title>
+
+    <script type = "text/javascript">
+        window.onload = function(){
+            document.images[0].src = "b2.png";
+
+            document.getElementById("b1").onmouseover = function(){
+                document.images[0].src = "b1.png";
+            }
+            document.getElementById("b1").onmouseout = function(){
+                document.images[0].src = "b2.png";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h3>onmouseover und onmouseout</h3>
+    <img alt = "Grafikwechsel" title="Grafikwechsel" id="b1" />
+</body>
+</html>

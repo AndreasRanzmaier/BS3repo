@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>do-while-Schleife</title>
+</head>
+<body>
+    <h3>Funktionen</h3>
+    <script type="text/javascript">
+        function test (par1, par2) {
+            document.write("parameter 1 mit dem Wert: " + par1 + "<br />");
+            document.write("parameter 2 mit dem Wert: " + par2 + "<br /> <br />");
+            
+            for (var i = 2; i < arguments.length; i++){
+                document.write("Zusatz Parameter: " + (i - 1) + " mit dem Wert: " + arguments[i] + "<br />");
+            }
+        }
+
+        test(10, 11, 12, 13, 14, 15);
+    </script>
+</body>
+</html>

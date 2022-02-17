@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Funktionsaufrufe</title>
+</head>
+<body>
+    <h3>Berechnen einer Kreisfläche</h3>
+    <p>nach der Formel: <code>A = &pi; / 4 * d <sup>2</sup></code></p>
+    <script type="text/javascript">
+        function flaeche (d) {
+         var PI = Math.PI;
+         var A = (PI / 4) * Math.pow(d, 2);
+         return A;
+        }
+
+        var ergebnis = 0; 
+        var durchmesser = 10;
+
+        ergebnis = flaeche(durchmesser);""
+        document.write("d= ", durchmesser, "m;","<br />","A=", ergebnis, "m <sup>2<\/sup>");
+    </script>
+</body>

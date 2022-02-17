@@ -1,0 +1,19 @@
+<body>
+    <h3>Lokale und globale Variablen</h3>
+    <script type="text/javascript">
+        var x = 10;
+        var y = 10;
+        var z = 1;
+
+        function produkt(x, y){
+            var ergebnis = x * y;
+            document.write("<br />Werte innerhalb der Funktion: x = " + x + "; y = " + y + "; z = " + z + "<br />");
+            document.write("Ergebnis in der Funktion: x * y = " + ergebnis + "<br />");
+            return ergebnis;
+        }
+
+        document.write("Werte außerhalb der Funktion: x = " + x + "; y = " + y + "; z = " + z + "<br />");
+        var meinProdukt = x * y * produkt(3, 4);
+        document.write("<br />Ergebnis außerhalb der Funktion: x(global) * y(global) * (Ergebnis lokal) = " + meinProdukt);
+</script>
+</body>

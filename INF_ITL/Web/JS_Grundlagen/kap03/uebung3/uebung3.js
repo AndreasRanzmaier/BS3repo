@@ -1,0 +1,1 @@
+document.write("Cato" + ' <br>' + "\"Ceterum censeo Carthaginem esse delendam\"");

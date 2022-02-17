@@ -1,0 +1,34 @@
+Lehrer Domenik Sticht 
+
+1 95% 2 85%
+
+Arbeitsaufträge 30%
+Mittarbeitskontrollen 70%
+
+Fragenkataloge als Ggrundlage der Mittarbeitskontrollen 
+    Joker Frage welche nicht aus dem Katalog ist aber definitiv duchbesprochen/gemacht wurde
+
+Schwerpunkt JavaScript
+dom Document Object Model 
+    events im Browser
+    bootstrap
+
+bootstrap und html Seite machen 
+mit php im backend daten einfüttern als Projekt mini WordPress
+
+-----------------------------------------------------------------------------------
+
+HTML JavaScript css im Zusammenspiel
+client/server
+
+Clientseitig programmieren um Serverlast zu minimieren Stichwort:"Lastverteilung"
+    Browser muss aber dafür die Scripte interpretieren W3C Standards
+
+Der interpreter von JS ist im Browser integriert
+
+Document object Model DOM 
+    abspeicherung der Hirachie in einem File als Objekt
+    zugriffe darauf wissen automatischs welchem Typ sie angehören
+
+CSS Cascading Style Sheet
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Funktionsaufrufe</title>
+    </head>
+<body>
+    <h3>Berechnen mehrerer Kreisflächen</h3>
+    <script type="text/javascript">
+        function flaeche(d){
+            return (Math.PI / 4 * Math.pow(d, 2));
+        }
+        
+        for (durchmesser = 0; durchmesser <= 100; durchmesser +=5){
+            document.write("d=", durchmesser, " m; A=", flaeche(durchmesser), " m<sup>2<\/sup><br />");
+        }
+    </script>
+</body>
+</html>
