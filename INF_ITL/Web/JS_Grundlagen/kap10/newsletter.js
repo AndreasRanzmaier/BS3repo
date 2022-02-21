@@ -73,10 +73,11 @@ function checkform() {
             alert("Bitte schreiben sie etwas!");
         }
     }
-    
-    document.getElementsByName("vorname").onmouseover = function(){
-        fehlermeldung += "mouseover vorname";
-    }
+
+    //todo: mouseover event 
+    form.querySelectorAll('input, textarea, select').forEach((el) => {
+        el.onmouseover = () => fehlermeldung += "Der Mauszeiger befindet sich über dem Eingabefeld " + el.getAttribute('name') + "<br/>";
+    });
     
     if (fehlermeldung != "") {
         putstatus(fehlermeldung);
