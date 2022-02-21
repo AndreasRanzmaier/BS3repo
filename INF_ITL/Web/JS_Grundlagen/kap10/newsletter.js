@@ -24,43 +24,60 @@ function testemailadresse(testString) {
     return suche.test(testString);
 }
 
-// checks all input fields if the input data is valid
+// checks all input fields if the input data is valid and write error alerts+logs
 function checkform() {
     var fehlermeldung = "";
     with (document.getElementById("anmeldeform")) {
+        // Namen validierung
         if (vorname.value == "") {
             fehlermeldung += "Bitte geben Sie Ihren Vornamen an!<br />";
+            alert("Bitte geben Sie Ihren Vornamen an!");
         }
         if (nachname.value == "") {
             fehlermeldung += "Bitte geben Sie Ihren Nachname an!<br />";
+            alert("Bitte geben Sie Ihren Nachname an!");
         }
-        if(nachname.value == vorname.value)
-        {
+        if(nachname.value == vorname.value){
             fehlermeldung += "Vorname und Nachname dürfen nicht gleich sein!<br />";
+            alert("Vorname und Nachname dürfen nicht gleich sein!");
         }
-        //todo: add Name validation
-        if(/^[a-zA-Z]+$/.test(str)){
-            fehlermeldung += "Bitte einen Validen Vornamen eingeben! <br />";
+        for (let i = 0; i < vorname.value.length; i++) {
+            if(vorname.value[i].match(/[a-z]/i)) { //todo: hier noch mit oders Andere Zeichen wie çčé hinzufügen
+            } else {
+                fehlermeldung += "Vorname darf nur Buchstaben enthalten!<br />";
+                alert("Vorname darf nur Buchstaben enthalten!");
+                // Russen, Polen und Skandinavier mögen uns hald nicht 
+            }
         }
-        //if(/^[^a-zA-Z]*$/.test(nachname)){
-        //    fehlermeldung += "Bitte einen Validen Nachnamen eingeben! <br />";
-        //}
-
+        for (let i = 0; i < nachname.value.length; i++) {
+            if(nachname.value[i].match(/[a-z]/i)) {
+            } else {
+                fehlermeldung += "Nachname darf nur Buchstaben enthalten!<br />";
+                alert("Nachname darf nur Buchstaben enthalten!");
+                // Russen, Polen und Skandinavier mögen uns hald nicht 
+            }
+        }
+        // Email validierung
         if (!testemailadresse(mail.value)) {
             fehlermeldung += "Die eingegebene E-Mail-Adresse ist nicht korrekt!<br />";
+            alert("Die eingegebene E-Mail-Adresse ist nicht korrekt!");
         }
-
-        
-        // todo: having to check atleast on of the 3 radiobxes 
-            // document.getElementById("_1234").checked = true;
-
-
-        // todo: having text in the textbox
-
-        // todo: fehlermeldungen in Alerts ausgeben
-
-        // todo: mouseover event
+        // Radiobutton validierung
+        if(!r1.checked){
+            fehlermeldung += "Bitte wählen sie aus wann Ihr nächster Urlaub geplant ist!<br />";
+            alert("Bitte wählen sie aus wann Ihr nächster Urlaub geplant ist!");
+        }
+        // Textbox validierung 
+        if(mitteilung.value == ""){
+            fehlermeldung += "Bitte schreiben sie etwas!<br />";
+            alert("Bitte schreiben sie etwas!");
+        }
     }
+    
+    document.getElementsByName("vorname").onmouseover = function(){
+        fehlermeldung += "mouseover vorname";
+    }
+    
     if (fehlermeldung != "") {
         putstatus(fehlermeldung);
         return false;
@@ -68,3 +85,4 @@ function checkform() {
         return confirm("Möchten Sie die Daten jetzt absenden?");
     }
 }
+
