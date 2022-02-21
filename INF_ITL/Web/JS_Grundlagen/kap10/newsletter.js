@@ -1,28 +1,38 @@
 window.onload = function() {
     document.getElementById("anmeldeform").onsubmit = checkform;
     document.getElementById("anmeldeform").onreset = checkreset;
+    domouseover();
+};
+
+// adding a log whenever the mouse is over a "input field"
+function domouseover(){
+    document.querySelectorAll('input, textarea, select').forEach( function(el) {
+        el.onmouseover = function(){
+           putstatus("Der Mauszeiger befindet sich über dem Eingabefeld " + el.getAttribute('name') + "<br/>")
+        };
+    });
 };
 
 // confirm alert to reconfirm for reset
 function checkreset() {
     return confirm("Wollen Sie das Formular wirklichzurücksetzen?");
-}
+};
 
 // filling the 'status' Element
 function putstatus(mytext) {
-    document.getElementById('status').innerHTML = mytext;
-}
+    document.getElementById('status').innerHTML += mytext;
+};
 
 // clearing the 'status' Element
 function clearstatus() {
     document.getElementById('status').innerHTML = '';
-}
+};
 
 // assessing the email input with a regex
 function testemailadresse(testString) {
     var suche = /^[\w\.\-]{2,}\@[äöüa-z0-9\-\.]{1,}\.[a-z]{2,4}$/i;
     return suche.test(testString);
-}
+};
 
 // checks all input fields if the input data is valid and write error alerts+logs
 function checkform() {
@@ -73,11 +83,6 @@ function checkform() {
             alert("Bitte schreiben sie etwas!");
         }
     }
-
-    //todo: mouseover event 
-    form.querySelectorAll('input, textarea, select').forEach((el) => {
-        el.onmouseover = () => fehlermeldung += "Der Mauszeiger befindet sich über dem Eingabefeld " + el.getAttribute('name') + "<br/>";
-    });
     
     if (fehlermeldung != "") {
         putstatus(fehlermeldung);
@@ -85,5 +90,4 @@ function checkform() {
     } else {
         return confirm("Möchten Sie die Daten jetzt absenden?");
     }
-}
-
+};
