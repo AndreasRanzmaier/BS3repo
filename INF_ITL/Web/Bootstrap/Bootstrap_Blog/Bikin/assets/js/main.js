@@ -8,6 +8,16 @@
   "use strict";
 
   /**
+   * Table Darstellung laut https://datatables.net/extensions/fixedheader/examples/integration/responsive-bootstrap.html
+   */
+   $(document).ready(function() {
+    var table = $('#BlogbeitraegeTeable').DataTable( {
+        responsive: true
+    } );
+ 
+    new $.fn.dataTable.FixedHeader( table );
+} );
+  /**
    * Easy selector helper function
    */
   const select = (el, all = false) => {
