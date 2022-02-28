@@ -17,6 +17,19 @@
  
     //new $.fn.dataTable.FixedHeader( table );
 } );
+
+  // BlogbeitraegeTable, blogbeitraege
+  $("#meinSwitch").on("change", function(){
+
+    if(this.checked == true){
+      $("#Blog").show()
+      $("#blogbeitraege").hide()
+    }
+    else{
+      $("#Blog").hide()
+      $("#blogbeitraege").show()
+    }
+  })
   /**
    * Easy selector helper function
    */
