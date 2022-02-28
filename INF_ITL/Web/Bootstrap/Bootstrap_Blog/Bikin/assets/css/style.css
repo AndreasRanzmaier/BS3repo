@@ -135,14 +135,28 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   max-height: 40px;
 }
-/*
-#
-*/
+
+/*--------------------------------------------------------------
+# Carousel 
+--------------------------------------------------------------*/
 .carousel-inner img {
-  float: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  float: center;
   width:  200px;
   height: 200px;
-  object-fit: cover;
+  object-fit: cover;  
+}
+
+.carousel-control-prev, .carousel-control-next{
+  filter: invert(100%);
+}
+
+.carousel h2{
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
