@@ -11,11 +11,11 @@
    * Table Darstellung laut https://datatables.net/extensions/fixedheader/examples/integration/responsive-bootstrap.html
    */
    $(document).ready(function() {
-    var table = $('#BlogbeitraegeTeable').DataTable( {
+    var table = $('#BlogbeitraegeTable').DataTable( {
         responsive: true
     } );
  
-    new $.fn.dataTable.FixedHeader( table );
+    //new $.fn.dataTable.FixedHeader( table );
 } );
   /**
    * Easy selector helper function
