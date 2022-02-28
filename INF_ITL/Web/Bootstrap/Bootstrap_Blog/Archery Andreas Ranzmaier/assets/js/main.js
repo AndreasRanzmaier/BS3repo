@@ -87,12 +87,12 @@
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
-    let header = select('#header')
+    let header = select('#header') 
     let offset = header.offsetHeight
 
-    let elementPos = select(el).offsetTop
+    let elementPos = select(el).offsetTop //wie weit is des gesuche element von oben weg
     window.scrollTo({
-      top: elementPos - offset,
+      top: elementPos - offset, // - offset um unter der nav bar zu sein 
       behavior: 'smooth'
     })
   }
