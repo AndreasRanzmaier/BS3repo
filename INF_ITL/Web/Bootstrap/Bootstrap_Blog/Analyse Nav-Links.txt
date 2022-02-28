@@ -5,5 +5,5 @@
 
     Die Funktion scrollto (89) wird von den einzelnen Navbar Elementen aufgerufen
     Sie sucht sich den Abstand von diesem Element zum Top 
-    und scrollt um diesen Abstand - die Navbar da diese ja sticky,
-    also immer Sichtbar oben zu sehen ist.
+    und scrollt um diesen Abstand minus die Navbar-höhe da diese ja sticky,
+    also immer Sichtbar oben zu sehen.
