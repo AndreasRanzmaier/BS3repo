@@ -14,7 +14,7 @@
     var table = $('#BlogbeitraegeTable').DataTable( {
         responsive: true
     } );
- 
+    // todo: understand why this isn't needed
     //new $.fn.dataTable.FixedHeader( table );
 } );
 
