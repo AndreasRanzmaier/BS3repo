@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EnCnzQL7Tnk1fYRl+1fE+H9apVIuleplDioJvd/YC52kRbAOo8YePlWArWs4TTM/03ADbS36nFPYKOQYPUiEIQ==",
+  "success": true,
+  "projectFilePath": "C:\\_School\\BS3repo\\INF_ITL\\C#3\\01WiederholungsUebungen\\02\\02txt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\a.ranzmaier\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.1\\microsoft.netcore.app.host.win-x64.6.0.1.nupkg.sha512",
+    "C:\\Users\\a.ranzmaier\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.1\\microsoft.netcore.app.ref.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
