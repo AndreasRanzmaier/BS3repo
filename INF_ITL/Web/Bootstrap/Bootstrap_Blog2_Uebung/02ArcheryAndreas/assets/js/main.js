@@ -30,7 +30,6 @@
       $("#blogbeitraege").show()
     }
   })
-  
   /**
    * Easy selector helper function
    */
