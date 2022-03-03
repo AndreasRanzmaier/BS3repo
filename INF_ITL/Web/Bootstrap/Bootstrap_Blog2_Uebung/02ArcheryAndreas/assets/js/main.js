@@ -53,6 +53,26 @@
     }
   })
 
+  // adding a Watch to see if ImgClass has changed 
+  $("#imgClassSelect").on("change", function () {
+    //checking which is selected and setting the Fontfamily accordingly
+    var value = $('#imgClassSelect :selected').val();
+  
+      // iterating over all h2s and changing there Font Family
+      var imgs = document.getElementsByTagName('img');
+      for (var i = 0, max = imgs.length; i < max; i++) {
+        if(value == "1"){
+          imgs[i].className = "border-danger";
+        }
+        if(value == "2"){
+          imgs[i].className =  "rounded"; 
+        }
+        if(value == "3"){
+          imgs[i].className = "rounded, border";
+        }
+      }
+    })
+
   // changing the color of h2s on change from the color picker
   $('#colorId').on("change", function () {
     var temp = document.getElementById('colorId').value;
