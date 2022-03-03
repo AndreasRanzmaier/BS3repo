@@ -7,61 +7,63 @@
 (function () {
   "use strict";
 
-  /**
-   * Table Darstellung laut https://datatables.net/extensions/fixedheader/examples/integration/responsive-bootstrap.html
-   */
- $(document).ready(function () {
-  var table = $('#BlogbeitraegeTable').DataTable({
-    responsive: true
+
+  // Table Darstellung laut
+  // https://datatables.net/extensions/fixedheader/examples/integration/responsive-bootstrap.html 
+  $(document).ready(function () {
+    var table = $('#BlogbeitraegeTable').DataTable({
+      responsive: true
+    });
   });
-});
 
-// BlogbeitraegeTable, blogbeitraege
-$("#meinSwitch").on("change", function () {
+  // BlogbeitraegeTable, blogbeitraege
+  $("#meinSwitch").on("change", function () {
 
-  if (this.checked == true) {
-    $("#Blog").show()
-    $("#blogbeitraege").hide()
-  }
-  else {
-    $("#Blog").hide()
-    $("#blogbeitraege").show()
-  }
-})
+    if (this.checked == true) {
+      $("#Blog").show()
+      $("#blogbeitraege").hide()
+    }
+    else {
+      $("#Blog").hide()
+      $("#blogbeitraege").show()
+    }
+  })
 
-// adding a Watch to see if font has changed 
-$("#themeselect").on("change", function () {
-  //checking which is selected and setting the Fontfamily accordingly
-  var value = $('#themeselect :selected').val();
-  var fontFamilyy = "";
-  switch (value) {
+  // adding a Watch to see if font has changed 
+  $("#themeselect").on("change", function () {
+    //checking which is selected and setting the Fontfamily accordingly
+    var value = $('#themeselect :selected').val();
+    var fontFamilyy = "";
+    switch (value) {
       case "1":
-        fontFamilyy = "Open Sans"; 
-          break;
+        fontFamilyy = "Open Sans";
+        break;
       case "2":
         fontFamilyy = "Comic Sans MS";
-          break;
+        break;
       case "3":
         fontFamilyy = "Arial";
-          break;
-  }
+        break;
+    }
 
-  // iterating over all h2s and changing there Font Family
-  var h2s = document.getElementsByTagName('h2');
-  for (var i=0, max=h2s.length; i < max; i++) {
-    h2s[i].style.fontFamily = fontFamilyy;
-}})
+    // iterating over all h2s and changing there Font Family
+    var h2s = document.getElementsByTagName('h2');
+    for (var i = 0, max = h2s.length; i < max; i++) {
+      h2s[i].style.fontFamily = fontFamilyy;
+    }
+  })
 
   // changing the color of h2s on change from the color picker
-  $('#colorId').on("change", function (){
+  $('#colorId').on("change", function () {
     var temp = document.getElementById('colorId').value;
 
     var h2arr = document.getElementsByTagName('h2');
-    for (let index = 0; index < h2arr.length; index++){
+    for (let index = 0; index < h2arr.length; index++) {
       h2arr[index].style.color = temp;
     }
     document.getElementsByTagName('h2').style.color = temp;
   })
+
   /**
    * Easy selector helper function
    */
@@ -119,7 +121,7 @@ $("#themeselect").on("change", function () {
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
-    let header = select('#header') 
+    let header = select('#header')
     let offset = header.offsetHeight
 
     let elementPos = select(el).offsetTop //wie weit is des gesuche element von oben weg
