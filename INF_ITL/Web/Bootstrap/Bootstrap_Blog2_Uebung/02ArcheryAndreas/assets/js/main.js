@@ -39,7 +39,7 @@ $("#themeselect").on("change", function () {
         fontFamilyy = "Open Sans"; 
           break;
       case "2":
-        fontFamilyy = "Comic Sans";
+        fontFamilyy = "Comic Sans MS";
           break;
       case "3":
         fontFamilyy = "Arial";
@@ -50,9 +50,18 @@ $("#themeselect").on("change", function () {
   var h2s = document.getElementsByTagName('h2');
   for (var i=0, max=h2s.length; i < max; i++) {
     h2s[i].style.fontFamily = fontFamilyy;
-}
+}})
 
-})
+  // changing the color of h2s on change from the color picker
+  $('#colorId').on("change", function (){
+    var temp = document.getElementById('colorId').value;
+
+    var h2arr = document.getElementsByTagName('h2');
+    for (let index = 0; index < h2arr.length; index++){
+      h2arr[index].style.color = temp;
+    }
+    document.getElementsByTagName('h2').style.color = temp;
+  })
   /**
    * Easy selector helper function
    */
