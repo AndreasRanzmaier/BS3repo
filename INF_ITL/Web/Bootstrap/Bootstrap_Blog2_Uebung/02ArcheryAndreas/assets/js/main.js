@@ -31,19 +31,27 @@ $("#meinSwitch").on("change", function () {
 
 // adding a Watch to see if font has changed 
 $("#themeselect").on("change", function () {
+  //checking which is selected and setting the Fontfamily accordingly
   var value = $('#themeselect :selected').val();
-  console.log(value); 
-  switch (select) {
-      case 1:
-          
+  var fontFamilyy = "";
+  switch (value) {
+      case "1":
+        fontFamilyy = "Open Sans"; 
           break;
-      case 2:
-
+      case "2":
+        fontFamilyy = "Comic Sans";
           break;
-      case 3:
-        
+      case "3":
+        fontFamilyy = "Arial";
           break;
   }
+
+  // iterating over all h2s and changing there Font Family
+  var h2s = document.getElementsByTagName('h2');
+  for (var i=0, max=h2s.length; i < max; i++) {
+    h2s[i].style.fontFamily = fontFamilyy;
+}
+
 })
   /**
    * Easy selector helper function
