@@ -74,7 +74,7 @@
     })
 
   // changing the color of h2s on change from the color picker
-  $('#colorId').on("change", function () {
+  $('#colorIdH2').on("change", function () {
     var temp = document.getElementById('colorId').value;
 
     var h2arr = document.getElementsByTagName('h2');
@@ -83,6 +83,17 @@
     }
     document.getElementsByTagName('h2').style.color = temp;
   })
+
+    // changing the color of links on change from the color picker
+    $('#colorIdlinks').on("change", function () {
+      var temp = document.getElementById('colorId').value;
+  
+      var link = document.getElementsByTagName('a');
+      for (let index = 0; index < link.length; index++) {
+        link[index].style.color = temp;
+      }
+      document.getElementsByTagName('a').style.color = temp;
+    })
 
   /**
    * Easy selector helper function
