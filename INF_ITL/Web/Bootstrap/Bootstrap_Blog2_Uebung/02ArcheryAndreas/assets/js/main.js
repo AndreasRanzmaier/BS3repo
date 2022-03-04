@@ -62,13 +62,13 @@
       var imgs = document.getElementsByTagName('img');
       for (var i = 0, max = imgs.length; i < max; i++) {
         if(value == "1"){
-          imgs[i].className = "border-danger";
+          imgs[i].className = "border border-danger";
         }
         if(value == "2"){
           imgs[i].className =  "rounded"; 
         }
         if(value == "3"){
-          imgs[i].className = "rounded, border";
+          imgs[i].className = "rounded-circle";
         }
       }
     })
