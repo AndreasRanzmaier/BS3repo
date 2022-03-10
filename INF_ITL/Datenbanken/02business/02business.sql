@@ -1,4 +1,5 @@
--- business
+-- business 
+-- Andreas Ranzmaier 09.03.22
 -- a) Ausgabe aller DS und Attribute der Tabelle PRODUCER
 select * from producer;
 
@@ -96,3 +97,33 @@ from producer p
 natural join article_producer ap 
 group by p.pro_name
 having anz > 1;
+
+-- R. Martl, 10.03.22
+-- selecting all ds not in the other
+-- outer join
+select * from article
+left outer join article_producer using (art_id) -- using kann nur dann verwendet werden wennpk und fk gleich sind
+where pro_id is null;
+
+-- subquery
+select * from article
+where art_id not in 
+(select art_id from article_producer);
+
+-- Aufgabe: alle Hersteller die noch keinen Artikel haben 
+-- outer join
+select p.pro_name
+from producer p
+left join article_producer ap using(pro_id)
+where ap.art_id is null;
+
+-- sub query 
+select p.pro_name 
+from producer p
+where pro_id not in (select pro_id from article_producer);
+
+-- natural join (gehört zu Inner Joins)
+select art_name, pro_name
+from article_producer natural join (producer, article);
+-- natural join: vergleicht von allen Tabellen, 
+-- alle Atribute mit gleichem Namen!
