@@ -18,21 +18,13 @@ if (isset($_POST['save'])) {
     }
 }
 else {
-
-    
-
-
     //Formular anzeigen
-
     ?>
     <form method ="post">
         <label for="ort">Ortsname:</label>
         <input type="text" id="ort" name="ort" required placeholder="z.B. Linz">
             <br>
             <?php
-
-
-
             $query = 'select * from plz where ort_id is null order by plz_nr';
             $stmt = $con->prepare($query);
             $stmt->execute();
