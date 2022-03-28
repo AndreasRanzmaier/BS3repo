@@ -46,13 +46,16 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="?page=start">Home</a>
+          <a class="nav-link " aria-current="page" href="?page=start">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="?page=form">Formular</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link" href="?page=adresse">Adressen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="?page=ortinsert">Ort erfassen</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -68,12 +71,19 @@
     <h1>Webseite</h1>
     <?php
     include 'page/conf.php';
+    include 'page/funktionen.php';
     if(isset($_GET['page']))
     {
       switch($_GET['page'])
       {
         case 'form':
           include 'page/plz.php';
+          break;
+        case 'adresse':
+          include 'page/adresse.php';
+          break;
+        case 'ortinsert':
+          include 'page/ort_erfassen.php';
           break;
         default:
           include 'page/start.html';

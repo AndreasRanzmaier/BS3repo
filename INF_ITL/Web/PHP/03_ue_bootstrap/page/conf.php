@@ -3,7 +3,7 @@ try
 {
   $server = 'localhost';
   $user = 'root';
-  $pwd = '';
+  $pwd = 'Schwert@4724';
   $db = 'adresse';
 
   $con = new PDO('mysql:host='.$server.';
