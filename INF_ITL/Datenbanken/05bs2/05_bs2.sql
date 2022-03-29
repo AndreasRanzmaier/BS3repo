@@ -83,5 +83,8 @@ inner join schueler using(sckl_id)
 inner join person using(per_id)
 order by scja_name, kla_name, per_nname, per_vname;
 
+-- 9) 
+	
+
 -- 10) Geben Sie den CREATE TABLE Befehl für die Tabelle schueler aus.
 show create table schueler;
