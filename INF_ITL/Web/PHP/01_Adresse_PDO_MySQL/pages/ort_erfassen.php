@@ -1,11 +1,11 @@
 <?php
+/** @var $con $db **/
 if (isset($_POST['save'])) {
     try {
         $ort = $_POST['ort'];
         $plzid = $_POST['plz'];
         $query1 = 'insert into ort (ort_name) values(?)';
         $query2 = 'update plz set ort_id=? where plz_id=?';
-
         $stmt1 = $con->prepare($query1);
         $stmt1->execute([$ort]);
 
