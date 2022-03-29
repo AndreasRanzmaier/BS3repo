@@ -41,7 +41,7 @@ group by hasp_name
 having count(mewa_id) > 1;
 
 -- f) 
-select sum(vosp_preis + hasp_preis + nasp_preis)
+select vosp_preis + hasp_preis + nasp_preis
 from gast
 inner join menuewahl using(gast_id)
 inner join vorspeise using(vosp_id)
@@ -50,4 +50,22 @@ inner join nachspeise using(nasp_id)
 where gast_id = 1;
 
 -- g) 
-select * 
+select 
+concat_ws(' ', gast_vname, gast_nname) as "Gast",
+vosp_preis + hasp_preis + nasp_preis as "Preis" 
+from gast
+left join menuewahl using(gast_id)
+left join vorspeise using(vosp_id)
+left join hauptspeise using(hasp_id)
+left join nachspeise using(nasp_id)
+order by gast_nname; 
+
+-- h)
+select 
+concat_ws(' ', gast_vname, gast_nname) as "Gast",
+max(vosp_preis + hasp_preis + nasp_preis) as "Preis" 
+from gast
+left join menuewahl using(gast_id)
+left join vorspeise using(vosp_id)
+left join hauptspeise using(hasp_id)
+left join nachspeise using(nasp_id);
