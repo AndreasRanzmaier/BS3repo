@@ -1,0 +1,3 @@
+-2 pc und 2 router 1841 
+-verbinden mit console cable rs232-ethernet
+-verbinden mit schwerzen (fast etherner 01) copper cross

@@ -1,0 +1,29 @@
+Statisches Touting 
+
+-2 pc und 2 router 1841 
+-verbinden mit console cable rs232-ethernet
+-verbinden mit schwerzen (fast etherner 01) copper cross
+-benennung nach bild
+
+-pc0 ip adresse setzen, ipconfiguration 
+    192.168.50.50
+    255.255.255.0
+    192.168.50.1
+
+-pc1 ip adresse setzen, ipconfiguration 
+    192.168.40.40
+    255.255.255.0
+    192.168.40.1
+
+-pc 0 terminal
+    no
+    Router> enable ... wechselent in den enable modus
+    Router# show running-config ... zeigt die aktuelle Konfiguration an
+    
+    Router# configure terminal
+    Router(config)# interface FastEthernet0/1
+    Router(config-if)# ip address 192.168.50.1 255.255.255.0
+    Router(config-if)# no shutdown
+
+-Router konfigurieren 
+    befehlsliste für Cisco-Router 
