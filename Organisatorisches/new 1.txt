@@ -1,8 +1,0 @@
-DTSM 
-	pretty much the Questionare
-INF 
-	4 Fragenkataloge
-ITL
-	Bootstrap Blog 
-	DOM zugriff 
-	Event und ansprache mittels JS auf dieses Event
